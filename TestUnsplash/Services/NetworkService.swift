@@ -18,18 +18,19 @@ class NetworkService {
     static let endPoint = "https://api.unsplash.com/"
     static let accessKey = "i6xkfXe33b7kyclfSPA76pfeasTLWbY5OyQpNbpl7DA"
     
-    static func getListPictures<T: Decodable>(with url: ApiRequests,
+    static func getListPictures<T: Decodable>(with url: String,
                                         query: String = "",
                                         completition: @escaping(_ result: T?, _ error: String?) -> Void ) {
         let randomPage = Int.random(in: 0...10)
         
         var completeUrl = "\(endPoint)\(url)?client_id=\(accessKey)&per_page=30"
 
-        if url == ApiRequests.searchRequest {
+        if url == ApiRequests.searchRequest.rawValue {
             completeUrl += "&query=\(query)"
         } else {
             completeUrl += "&page=\(randomPage)"
         }
+        print(completeUrl)
         AF.request(completeUrl, method: .get)
             .validate(statusCode: 200..<300)
             .responseData { (response) in

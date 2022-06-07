@@ -12,8 +12,8 @@ class FirstVCItem: UICollectionViewCell {
     
     var picture: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "photo")
         imageView.contentMode = .scaleAspectFill
+        imageView.tintColor = .systemGray
         imageView.layer.shadowRadius = 10
         imageView.layer.shadowOpacity = 0.3
         imageView.layer.cornerRadius = 10
