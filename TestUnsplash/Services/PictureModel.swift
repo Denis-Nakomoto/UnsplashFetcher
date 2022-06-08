@@ -14,9 +14,18 @@ struct SearchResult: Decodable {
 struct Photo: Decodable, Hashable {
 
     let id: String?
+    let createdAt: String?
     let urls: Urls?
-    let description: String?
     let user: User?
+    let likes: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case createdAt = "created_at"
+        case urls
+        case likes
+        case user
+    }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
@@ -32,6 +41,7 @@ struct Urls: Decodable {
 }
 
 struct User: Decodable {
-    let id: String
-    let name: String
+    let id: String?
+    let name: String?
+    let location: String?
 }

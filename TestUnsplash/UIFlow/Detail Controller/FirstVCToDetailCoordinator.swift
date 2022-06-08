@@ -8,17 +8,20 @@
 import UIKit
 
 class FirstVCToDetailCoordinator: Coordinator, DetailFlow {
-    let navigationController: UINavigationController
     
-    init(navigationController: UINavigationController) {
+    let navigationController: UINavigationController
+    let picture: Photo
+    
+    init(navigationController: UINavigationController, picture: Photo) {
         self.navigationController = navigationController
+        self.picture = picture
     }
     
     func start() {
         let detailViewController = DetailViewController()
         detailViewController.coordinator = self
-        
-        navigationController.present(detailViewController, animated: true, completion: nil)
+        detailViewController.photo = picture
+        navigationController.pushViewController(detailViewController, animated: true)
     }
     
     // MARK: - Flow Methods

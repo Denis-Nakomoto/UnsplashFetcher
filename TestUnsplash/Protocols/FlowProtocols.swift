@@ -12,11 +12,11 @@ protocol StartFlow: AnyObject {
 }
 
 protocol FirstVCFlow: AnyObject {
-    func coordinateToDetail()
+    func coordinateToDetail(with picture: Photo)
 }
 
 protocol SecondVCFlow: AnyObject {
-    func coordinateToDetail()
+    func coordinateToDetail(with picture: Photo)
 }
 
 protocol DetailFlow: AnyObject {

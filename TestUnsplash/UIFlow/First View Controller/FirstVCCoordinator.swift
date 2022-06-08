@@ -23,8 +23,8 @@ class FirstVCCoordinator: Coordinator, FirstVCFlow {
     }
     
     // MARK: - Flow Methods
-    func coordinateToDetail() {
-        let firstVCToDetailCoordinator = FirstVCToDetailCoordinator(navigationController: navigationController!)
+    func coordinateToDetail(with picture: Photo) {
+        let firstVCToDetailCoordinator = FirstVCToDetailCoordinator(navigationController: navigationController!, picture: picture)
         coordinate(to: firstVCToDetailCoordinator)
     }
 }

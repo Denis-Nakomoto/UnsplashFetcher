@@ -30,7 +30,7 @@ class NetworkService {
         } else {
             completeUrl += "&page=\(randomPage)"
         }
-        print(completeUrl)
+
         AF.request(completeUrl, method: .get)
             .validate(statusCode: 200..<300)
             .responseData { (response) in
@@ -50,5 +50,51 @@ class NetworkService {
                     }
             }
     }
+    
+    static func getPicture(with picId: String,
+                                        completition: @escaping(_ result: Photo?, _ error: String?) -> Void ) {
+        
+        let completeUrl = "\(endPoint)photos/\(picId)?client_id=\(accessKey)"
+
+        AF.request(completeUrl, method: .get)
+            .validate(statusCode: 200..<300)
+            .responseData { (response) in
+                    switch response.result {
+                    case .success(let data):
+                        do {
+                            let pictures = try JSONDecoder().decode(Photo.self, from: data)
+                            completition(pictures, nil)
+                        }
+                        catch let err {
+                            print ("ENCOIDNG ERROR \(err)")
+                            completition(nil, err.localizedDescription)
+                        }
+                    case .failure (let error):
+                        print("AF REQUEST FAILURE \(error)")
+                        completition(nil, error.localizedDescription)
+                    }
+            }
+    }
+    
+    static func downloadPicture(with photo: Photo,
+                                        completition: @escaping(_ result: UIImage?, _ error: String?) -> Void ) {
+        guard let urlString = photo.urls?.regular else { return }
+        
+        let url = URL(string: urlString)!
+
+        AF.request(url, method: .get)
+            .validate(statusCode: 200..<300)
+            .responseData { (response) in
+                    switch response.result {
+                    case .success(let data):
+                            let pictures = UIImage(data: data)
+                            completition(pictures, nil)
+                    case .failure (let error):
+                        print("AF REQUEST FAILURE \(error)")
+                        completition(nil, error.localizedDescription)
+                    }
+            }
+    }
+    
     
 }

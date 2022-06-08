@@ -24,8 +24,8 @@ class SecondVCCoordinator: Coordinator, SecondVCFlow {
     }
     
     // MARK: - Flow Methods
-    func coordinateToDetail() {
-        let secondVCToDetailCoordinator = FirstVCToDetailCoordinator(navigationController: navigationController!)
+    func coordinateToDetail(with picture: Photo) {
+        let secondVCToDetailCoordinator = FirstVCToDetailCoordinator(navigationController: navigationController!, picture: picture)
         coordinate(to: secondVCToDetailCoordinator)
     }
 }

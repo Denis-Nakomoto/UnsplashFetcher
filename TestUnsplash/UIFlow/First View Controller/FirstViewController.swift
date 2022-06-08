@@ -27,11 +27,17 @@ class FirstViewController: UIViewController {
     
     var photos: [Photo]?
     
+    var favorites: [CDPicture]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstraints()
         createDataSource()
         setupSearchBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getFavorites()
         loadPhotos()
     }
     
@@ -81,12 +87,22 @@ class FirstViewController: UIViewController {
         queue.async {
             NetworkService.getListPictures(with: ApiRequests.photos.rawValue) { [weak self] (result: [Photo]?, error) in
                 guard let self = self else { return }
+                if let error = error {
+                    DispatchQueue.main.async {
+                        self.showAlert(with: "Info", and: "Something went wrong \(error)")
+                    }
+                    return
+                }
                 DispatchQueue.main.async {
                     self.photos = result
                     self.reloadData()
                 }
             }
         }
+    }
+    
+    private func getFavorites() {
+        favorites = StorageService.fetchAllFavorites()
     }
 }
 
@@ -107,7 +123,10 @@ extension FirstViewController {
             case .mySection:
                 guard let item = collectionView.dequeueReusableCell(withReuseIdentifier: FirstVCItem.reuseId, for: indexPath) as? FirstVCItem
                 else { fatalError() }
-                item.setPicture(with: self.photos?[indexPath.row].urls?.small ?? "")
+                let photo = self.photos?[indexPath.row]
+                item.favorites = self.favorites
+                item.photo = photo
+                item.setPicture(with: photo?.urls?.small ?? "")
                 return item
             }
         })
@@ -124,6 +143,11 @@ extension FirstViewController {
 //MARK: - Delegate
 extension FirstViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let photos = photos else { return }
+        let photo = photos[indexPath.row]
+        coordinator?.coordinateToDetail(with: photo)
+    }
 }
 
 //MARK: - SearchBarDelegate
@@ -133,6 +157,12 @@ extension FirstViewController: UISearchBarDelegate {
             NetworkService.getListPictures(with: ApiRequests.searchRequest.rawValue,
                                            query: searchText) { [weak self] (result: SearchResult?, error) in
                 guard let self = self else { return }
+                if let error = error {
+                    DispatchQueue.main.async {
+                        self.showAlert(with: "Info", and: "Something went wrong \(error)")
+                    }
+                    return
+                }
                 DispatchQueue.main.async {
                     self.photos = result?.results
                     self.reloadData()

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1D2D412B4B8D14BBFAD0F2EC /* Pods_TestUnsplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D52312A9C11CB051E198C15 /* Pods_TestUnsplash.framework */; };
+		9260756C28502E7B004B7371 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260756B28502E7B004B7371 /* Array+Extension.swift */; };
+		92712084284EDAF4003068B6 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92712083284EDAF4003068B6 /* UIViewController+Extension.swift */; };
+		9277D7482850287E0098EF70 /* AddToFavProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9277D7472850287E0098EF70 /* AddToFavProtocol.swift */; };
+		9289C455284F67070017A7D9 /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9289C453284F67070017A7D9 /* Favorites.xcdatamodeld */; };
+		9289C458284F68610017A7D9 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9289C457284F68610017A7D9 /* StorageService.swift */; };
 		92F4B52A284DCA2700A660CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B529284DCA2700A660CE /* AppDelegate.swift */; };
 		92F4B52C284DCA2700A660CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B52B284DCA2700A660CE /* SceneDelegate.swift */; };
 		92F4B536284DCA2800A660CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92F4B534284DCA2800A660CE /* LaunchScreen.storyboard */; };
@@ -22,19 +27,22 @@
 		92F4B557284DF84B00A660CE /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B556284DF84B00A660CE /* TabBarCoordinator.swift */; };
 		92F4B55A284DF89700A660CE /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B559284DF89700A660CE /* TabBarController.swift */; };
 		92F4B55C284DFE8A00A660CE /* SecondVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B55B284DFE8A00A660CE /* SecondVCCell.swift */; };
-		92F4B55E284DFE9D00A660CE /* SecondVCDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B55D284DFE9D00A660CE /* SecondVCDataSource.swift */; };
 		92F4B560284DFEAC00A660CE /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B55F284DFEAC00A660CE /* UITableViewCell+Extension.swift */; };
 		92F4B562284DFF2A00A660CE /* FirstVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B561284DFF2A00A660CE /* FirstVCCoordinator.swift */; };
 		92F4B564284DFF3B00A660CE /* SecondVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B563284DFF3B00A660CE /* SecondVCCoordinator.swift */; };
 		92F4B568284E012600A660CE /* FirstVCToDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B567284E012600A660CE /* FirstVCToDetailCoordinator.swift */; };
 		92F4B56B284E016A00A660CE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B56A284E016A00A660CE /* DetailViewController.swift */; };
-		92F4B56D284E01AE00A660CE /* SecondVCToDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B56C284E01AE00A660CE /* SecondVCToDetailCoordinator.swift */; };
 		92F4B56F284E07DE00A660CE /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4B56E284E07DE00A660CE /* PictureModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D52312A9C11CB051E198C15 /* Pods_TestUnsplash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestUnsplash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FBEE36AA46958B69EA2F0DF /* Pods-TestUnsplash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUnsplash.debug.xcconfig"; path = "Target Support Files/Pods-TestUnsplash/Pods-TestUnsplash.debug.xcconfig"; sourceTree = "<group>"; };
+		9260756B28502E7B004B7371 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		92712083284EDAF4003068B6 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		9277D7472850287E0098EF70 /* AddToFavProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavProtocol.swift; sourceTree = "<group>"; };
+		9289C454284F67070017A7D9 /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
+		9289C457284F68610017A7D9 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		92F4B526284DCA2700A660CE /* TestUnsplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestUnsplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F4B529284DCA2700A660CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92F4B52B284DCA2700A660CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,13 +59,11 @@
 		92F4B556284DF84B00A660CE /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		92F4B559284DF89700A660CE /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		92F4B55B284DFE8A00A660CE /* SecondVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVCCell.swift; sourceTree = "<group>"; };
-		92F4B55D284DFE9D00A660CE /* SecondVCDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVCDataSource.swift; sourceTree = "<group>"; };
 		92F4B55F284DFEAC00A660CE /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		92F4B561284DFF2A00A660CE /* FirstVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVCCoordinator.swift; sourceTree = "<group>"; };
 		92F4B563284DFF3B00A660CE /* SecondVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVCCoordinator.swift; sourceTree = "<group>"; };
 		92F4B567284E012600A660CE /* FirstVCToDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVCToDetailCoordinator.swift; sourceTree = "<group>"; };
 		92F4B56A284E016A00A660CE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		92F4B56C284E01AE00A660CE /* SecondVCToDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVCToDetailCoordinator.swift; sourceTree = "<group>"; };
 		92F4B56E284E07DE00A660CE /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
 		C9E90C290F60AFAEA3EC653E /* Pods-TestUnsplash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestUnsplash.release.xcconfig"; path = "Target Support Files/Pods-TestUnsplash/Pods-TestUnsplash.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +88,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9289C456284F68160017A7D9 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				9289C453284F67070017A7D9 /* Favorites.xcdatamodeld */,
+			);
+			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
 		92F4B51D284DCA2700A660CE = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				92F4B543284DD0CF00A660CE /* App */,
-				92F4B54D284DD5D300A660CE /* Extensios */,
+				9289C456284F68160017A7D9 /* CoreDataStack */,
+				92F4B54D284DD5D300A660CE /* Extensions */,
 				92F4B554284DF76B00A660CE /* Protocols */,
 				92F4B546284DD1A800A660CE /* Services */,
 				92F4B555284DF7E300A660CE /* UIFlow */,
@@ -120,7 +135,6 @@
 				92F4B563284DFF3B00A660CE /* SecondVCCoordinator.swift */,
 				92F4B53F284DD0B500A660CE /* SecondViewController.swift */,
 				92F4B55B284DFE8A00A660CE /* SecondVCCell.swift */,
-				92F4B55D284DFE9D00A660CE /* SecondVCDataSource.swift */,
 			);
 			path = "Second View Controller";
 			sourceTree = "<group>";
@@ -149,24 +163,28 @@
 			isa = PBXGroup;
 			children = (
 				92F4B544284DD1A300A660CE /* NetworkService.swift */,
+				9289C457284F68610017A7D9 /* StorageService.swift */,
 				92F4B56E284E07DE00A660CE /* PictureModel.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		92F4B54D284DD5D300A660CE /* Extensios */ = {
+		92F4B54D284DD5D300A660CE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				92F4B54B284DD5CB00A660CE /* UICollectionViewCell+Extension.swift */,
 				92F4B55F284DFEAC00A660CE /* UITableViewCell+Extension.swift */,
+				92712083284EDAF4003068B6 /* UIViewController+Extension.swift */,
+				9260756B28502E7B004B7371 /* Array+Extension.swift */,
 			);
-			path = Extensios;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		92F4B554284DF76B00A660CE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				92F4B550284DF57E00A660CE /* CoordinatorProtocol.swift */,
+				9277D7472850287E0098EF70 /* AddToFavProtocol.swift */,
 				92F4B552284DF74B00A660CE /* FlowProtocols.swift */,
 			);
 			path = Protocols;
@@ -196,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				92F4B567284E012600A660CE /* FirstVCToDetailCoordinator.swift */,
-				92F4B56C284E01AE00A660CE /* SecondVCToDetailCoordinator.swift */,
 				92F4B56A284E016A00A660CE /* DetailViewController.swift */,
 			);
 			path = "Detail Controller";
@@ -208,7 +225,6 @@
 				6FBEE36AA46958B69EA2F0DF /* Pods-TestUnsplash.debug.xcconfig */,
 				C9E90C290F60AFAEA3EC653E /* Pods-TestUnsplash.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -328,22 +344,25 @@
 				92F4B562284DFF2A00A660CE /* FirstVCCoordinator.swift in Sources */,
 				92F4B52A284DCA2700A660CE /* AppDelegate.swift in Sources */,
 				92F4B54F284DF56100A660CE /* AppCoordinator.swift in Sources */,
+				9289C455284F67070017A7D9 /* Favorites.xcdatamodeld in Sources */,
 				92F4B548284DD1E300A660CE /* FirstVCItem.swift in Sources */,
 				92F4B52C284DCA2700A660CE /* SceneDelegate.swift in Sources */,
 				92F4B564284DFF3B00A660CE /* SecondVCCoordinator.swift in Sources */,
 				92F4B568284E012600A660CE /* FirstVCToDetailCoordinator.swift in Sources */,
 				92F4B560284DFEAC00A660CE /* UITableViewCell+Extension.swift in Sources */,
+				9277D7482850287E0098EF70 /* AddToFavProtocol.swift in Sources */,
 				92F4B551284DF57E00A660CE /* CoordinatorProtocol.swift in Sources */,
 				92F4B540284DD0B500A660CE /* SecondViewController.swift in Sources */,
 				92F4B545284DD1A300A660CE /* NetworkService.swift in Sources */,
 				92F4B557284DF84B00A660CE /* TabBarCoordinator.swift in Sources */,
-				92F4B56D284E01AE00A660CE /* SecondVCToDetailCoordinator.swift in Sources */,
+				9289C458284F68610017A7D9 /* StorageService.swift in Sources */,
+				9260756C28502E7B004B7371 /* Array+Extension.swift in Sources */,
+				92712084284EDAF4003068B6 /* UIViewController+Extension.swift in Sources */,
 				92F4B56B284E016A00A660CE /* DetailViewController.swift in Sources */,
 				92F4B55C284DFE8A00A660CE /* SecondVCCell.swift in Sources */,
 				92F4B56F284E07DE00A660CE /* PictureModel.swift in Sources */,
 				92F4B53E284DD0AA00A660CE /* FirstViewController.swift in Sources */,
 				92F4B55A284DF89700A660CE /* TabBarController.swift in Sources */,
-				92F4B55E284DFE9D00A660CE /* SecondVCDataSource.swift in Sources */,
 				92F4B54C284DD5CB00A660CE /* UICollectionViewCell+Extension.swift in Sources */,
 				92F4B553284DF74B00A660CE /* FlowProtocols.swift in Sources */,
 			);
@@ -555,6 +574,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9289C453284F67070017A7D9 /* Favorites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9289C454284F67070017A7D9 /* Favorites.xcdatamodel */,
+			);
+			currentVersion = 9289C454284F67070017A7D9 /* Favorites.xcdatamodel */;
+			path = Favorites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 92F4B51E284DCA2700A660CE /* Project object */;
 }
